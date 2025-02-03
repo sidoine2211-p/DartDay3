@@ -14,7 +14,6 @@ Amlette(this.nom,this.materiaux,this.puissance);
 
 
 // Méthode
-
 void presenteAmlette() {
 
 print("$nom:$materiaux,$puissance");
@@ -38,14 +37,21 @@ Amlette amletteOmbre = Amlette("Voile noctune", "Onyx", 60);
 //amletteGlace.presenteAmlette();
 //amletteOmbre.presenteAmlette();
 
-List<Object> collectionAmlette = [];
+// Je vais stocker les amlettes dans une liste
 
-for(int i = 0; i<1; i++) {
+List<Amlette> collectionAmlette = [amletteFeu,amletteGlace,amletteOmbre];
 
-collectionAmlette.add([amletteFeu.presenteAmlette(),amletteGlace.presenteAmlette(),amletteOmbre.presenteAmlette()]);
+for(var amlette in collectionAmlette) {
+
+amlette.presenteAmlette();
+}
 
 }
 
-print(collectionAmlette);
 
-}
+
+
+
+
+
+
